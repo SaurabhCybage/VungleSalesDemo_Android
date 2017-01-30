@@ -1,5 +1,5 @@
 REM your project resource folder's path
-set resourceFolder = "C:\Users\saurabhgupt\Downloads\Android-SDK-master\DemoTabBar\app\src\main\res"
+set resourceFolder=C:\Users\saurabhgupt\Downloads\Android-SDK-master\VungleSalesDemoApp\app\src\main\res
 
 move .\drawable-hdpi\*.png %resourceFolder%\drawable-hdpi
 move .\drawable-mdpi\*.png %resourceFolder%\drawable-mdpi
