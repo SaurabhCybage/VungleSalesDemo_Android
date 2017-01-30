@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#2f90ce</color>
+    <color name="app_background">#0c2033</color>
+    <color name="text_gray">#bbcde1</color>
+    <color name="text_white">@android:color/white</color>
+    <color name="green_gaming_ua">#01b27a</color>
+
+</resources>

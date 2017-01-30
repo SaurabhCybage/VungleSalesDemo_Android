@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Vungle</string>
+    <string name="one">one</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="advertize">Advertise</string>
+    <string name="monetize">Monetize</string>
+    <string name="gaming_ua">Gaming UA</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet consectetur adipiscing</string>
+    <string name="brand_ua">Brand UA</string>
+</resources>
