@@ -18,6 +18,13 @@
             android:adjustViewBounds="true"
             android:src="@drawable/advertise_gamingua" />
 
+        <ImageView
+            android:id="@+id/imageViewBrandUA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/advertise_brandua" />
+
 
         <ImageView
             android:id="@+id/imageViewDynamicTemplates"
@@ -33,13 +40,6 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/advertise_nativeadunits" />
-
-        <ImageView
-            android:id="@+id/imageViewBrandUA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/advertise_brandua" />
 
 
         <ImageView

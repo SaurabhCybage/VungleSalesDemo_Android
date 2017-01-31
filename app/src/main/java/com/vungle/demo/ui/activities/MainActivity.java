@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         setUpTabLayout(tabLayout);
 
-
-
     }
 
     private void setUpTabLayout(TabLayout tabLayout) {
