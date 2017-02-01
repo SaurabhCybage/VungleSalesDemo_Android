@@ -4,10 +4,20 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
+import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.decode.BaseImageDecoder;
+import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
+import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.vungle.demo.models.ad_data.AdData;
 import com.vungle.demo.network.inf.AdCallBack;
 import com.vungle.demo.network.inf.AdServer;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -26,7 +36,11 @@ public class VungleApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sContext = getApplicationContext();
+
+
     }
+
+
 
     public static VungleApplication getsApplication() {
         if (sVungleApplication == null) {

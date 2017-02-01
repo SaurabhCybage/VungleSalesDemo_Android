@@ -20,9 +20,15 @@ import retrofit2.Response;
  */
 public class AdServer {
 
-
+    /**
+     * Service call in interface to get ad data.
+     */
     private final AdApis adApis;
+    /**
+     * Storage for ad data.
+     */
     private AdStorage adStorage;
+
 
     public AdServer(Context context) {
         adApis = AdApis.retrofit.create(AdApis.class);
@@ -35,6 +41,7 @@ public class AdServer {
         call.enqueue(new Callback<List<AdData>>() {
             @Override
             public void onResponse(Call<List<AdData>> call, Response<List<AdData>> response) {
+                Log.e("AdServer", "onResponse " + response.toString());
                 List<AdData> adList = response.body();
                 adStorage.addOrReplaceAllReceivedAds(adList);
                 adCallBack.onSuccess(adList);
@@ -62,6 +69,15 @@ public class AdServer {
             }
         }
         return adsByCategory;
+    }
+
+    /**
+     * To refresh the ad data.
+     *
+     * @param adCallBack Callback interface.
+     */
+    public void refreshAdData(final AdCallBack adCallBack) {
+        initialiseAdServer(adCallBack);
     }
 
 }

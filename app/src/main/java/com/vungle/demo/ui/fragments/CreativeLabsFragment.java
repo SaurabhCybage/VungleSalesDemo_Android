@@ -24,10 +24,11 @@ import java.util.List;
 /**
  * Created by saurabhgupt on 2/1/2017.
  */
-public class GamingUaFragment extends Fragment {
+public class CreativeLabsFragment extends Fragment {
 
-    public static final String AD_CATEGORY = "gaming-ua";
+    public static final String AD_CATEGORY = "creative-labs";
     private RecyclerView recyclerViewGamingUa;
+
     private List<AdData> mAdList;
     private AdAdapter mAdAdapter;
 
@@ -42,10 +43,11 @@ public class GamingUaFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ad_list, container, false);
+
         setSwipeRefreshLayout(view);
 
         TextView textViewAdHeaderTitle = (TextView) view.findViewById(R.id.textViewAdHeaderTitle);
-        textViewAdHeaderTitle.setText("Gaming UA");
+        textViewAdHeaderTitle.setText("Creative Labs");
 
         recyclerViewGamingUa = (RecyclerView) view.findViewById(R.id.recyclerViewGamingUA);
         AdServer adServer = VungleApplication.getsApplication().getAdServer();
@@ -61,9 +63,7 @@ public class GamingUaFragment extends Fragment {
         return view;
     }
 
-
     private SwipeRefreshLayout mSwipeRefreshLayout;
-
     private void setSwipeRefreshLayout(View view) {
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -88,5 +88,4 @@ public class GamingUaFragment extends Fragment {
             }
         });
     }
-
 }

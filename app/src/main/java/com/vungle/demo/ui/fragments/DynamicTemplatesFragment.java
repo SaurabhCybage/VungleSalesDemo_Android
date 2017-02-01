@@ -24,9 +24,8 @@ import java.util.List;
 /**
  * Created by saurabhgupt on 2/1/2017.
  */
-public class GamingUaFragment extends Fragment {
-
-    public static final String AD_CATEGORY = "gaming-ua";
+public class DynamicTemplatesFragment extends Fragment {
+    private static final String AD_CATEGORY = "dynamic-templates";
     private RecyclerView recyclerViewGamingUa;
     private List<AdData> mAdList;
     private AdAdapter mAdAdapter;
@@ -45,7 +44,7 @@ public class GamingUaFragment extends Fragment {
         setSwipeRefreshLayout(view);
 
         TextView textViewAdHeaderTitle = (TextView) view.findViewById(R.id.textViewAdHeaderTitle);
-        textViewAdHeaderTitle.setText("Gaming UA");
+        textViewAdHeaderTitle.setText("Dynamic Templates");
 
         recyclerViewGamingUa = (RecyclerView) view.findViewById(R.id.recyclerViewGamingUA);
         AdServer adServer = VungleApplication.getsApplication().getAdServer();
@@ -60,7 +59,6 @@ public class GamingUaFragment extends Fragment {
 
         return view;
     }
-
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
 
@@ -88,5 +86,5 @@ public class GamingUaFragment extends Fragment {
             }
         });
     }
-
 }
+

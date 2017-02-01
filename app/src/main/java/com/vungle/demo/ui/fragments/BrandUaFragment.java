@@ -24,12 +24,12 @@ import java.util.List;
 /**
  * Created by saurabhgupt on 2/1/2017.
  */
-public class GamingUaFragment extends Fragment {
+public class BrandUaFragment extends Fragment {
 
-    public static final String AD_CATEGORY = "gaming-ua";
+    public static final String AD_CATEGORY = "brand-ua";
     private RecyclerView recyclerViewGamingUa;
-    private List<AdData> mAdList;
     private AdAdapter mAdAdapter;
+    private List<AdData> mAdList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class GamingUaFragment extends Fragment {
         setSwipeRefreshLayout(view);
 
         TextView textViewAdHeaderTitle = (TextView) view.findViewById(R.id.textViewAdHeaderTitle);
-        textViewAdHeaderTitle.setText("Gaming UA");
+        textViewAdHeaderTitle.setText("Brand UA");
 
         recyclerViewGamingUa = (RecyclerView) view.findViewById(R.id.recyclerViewGamingUA);
         AdServer adServer = VungleApplication.getsApplication().getAdServer();
@@ -88,5 +88,4 @@ public class GamingUaFragment extends Fragment {
             }
         });
     }
-
 }

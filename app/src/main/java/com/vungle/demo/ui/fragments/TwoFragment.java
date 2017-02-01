@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.vungle.demo.R;
 
@@ -27,21 +26,24 @@ public class TwoFragment extends Fragment {
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             switch (view.getId()) {
                 case R.id.imageViewGamingUA:
-                    Toast.makeText(getActivity(), "imageViewGamingUA", Toast.LENGTH_SHORT).show();
-                    transaction.replace(R.id.advertiseContainer, new GamingUaFragment());
+                    transaction.replace(R.id.advertiseContainer, new GamingUaFragment()).addToBackStack(null);
                     transaction.commit();
                     break;
                 case R.id.imageViewBrandUA:
-                    Toast.makeText(getActivity(), "imageViewBrandUA", Toast.LENGTH_SHORT).show();
+                    transaction.replace(R.id.advertiseContainer, new BrandUaFragment()).addToBackStack(null);
+                    transaction.commit();
                     break;
                 case R.id.imageViewDynamicTemplates:
-                    Toast.makeText(getActivity(), "imageViewDynamicTemplates", Toast.LENGTH_SHORT).show();
+                    transaction.replace(R.id.advertiseContainer, new DynamicTemplatesFragment()).addToBackStack(null);
+                    transaction.commit();
                     break;
                 case R.id.imageViewNativeAdUnits:
-                    Toast.makeText(getActivity(), "imageViewNativeAdUnits", Toast.LENGTH_SHORT).show();
+                    transaction.replace(R.id.advertiseContainer, new NativeAdUnitsFragment()).addToBackStack(null);
+                    transaction.commit();
                     break;
                 case R.id.imageViewCreativeLabs:
-                    Toast.makeText(getActivity(), "imageViewCreativeLabs", Toast.LENGTH_SHORT).show();
+                    transaction.replace(R.id.advertiseContainer, new CreativeLabsFragment());
+                    transaction.commit();
                     break;
 
             }
