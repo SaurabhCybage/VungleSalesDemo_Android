@@ -8,4 +8,7 @@
     <string name="gaming_ua">Gaming UA</string>
     <string name="dummy_text">Lorem ipsum dolor sit amet consectetur adipiscing</string>
     <string name="brand_ua">Brand UA</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
