@@ -3,7 +3,7 @@ package com.vungle.demo.models.ad_data;
 /**
  * Created by saurabhgupt on 1/30/2017.
  */
-public final class GetAdDataResponse {
+public final class AdData {
 
     private String adId;
     private String title;
@@ -90,7 +90,7 @@ public final class GetAdDataResponse {
 
     @Override
     public String toString() {
-        return "GetAdDataResponse{" +
+        return "AdData{" +
                 "adId='" + adId + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
