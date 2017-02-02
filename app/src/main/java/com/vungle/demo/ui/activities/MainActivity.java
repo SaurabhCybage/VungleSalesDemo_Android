@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.vungle.demo.R;
 import com.vungle.demo.ui.fragments.MonetizeFragment;
 import com.vungle.demo.ui.fragments.OneFragment;
-import com.vungle.demo.ui.fragments.ThreeFragment;
 import com.vungle.demo.ui.fragments.TwoFragment;
 
 public class MainActivity extends AppCompatActivity {

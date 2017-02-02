@@ -18,10 +18,10 @@ public interface AdApis {
 
 
     @GET("ads")
-    Call<List<AdData>> getDataResponse();
+    Call<List<AdData>> getAsData();
 
 
-    public static final Retrofit retrofit = new Retrofit.Builder()
+    Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://172.27.237.97:8080/salesdemo/wp-json/wp/v2/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
