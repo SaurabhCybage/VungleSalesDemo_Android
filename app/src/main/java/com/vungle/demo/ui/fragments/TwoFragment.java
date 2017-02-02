@@ -34,11 +34,11 @@ public class TwoFragment extends Fragment {
                     transaction.commit();
                     break;
                 case R.id.imageViewDynamicTemplates:
-                    transaction.replace(R.id.advertiseContainer, new DynamicTemplatesFragment()).addToBackStack(null);
+                    transaction.replace(R.id.advertiseContainer, new MonetizeDTemplatesFragment()).addToBackStack(null);
                     transaction.commit();
                     break;
                 case R.id.imageViewNativeAdUnits:
-                    transaction.replace(R.id.advertiseContainer, new NativeAdUnitsFragment()).addToBackStack(null);
+                    transaction.replace(R.id.advertiseContainer, new MonetizeNativeAdFragment()).addToBackStack(null);
                     transaction.commit();
                     break;
                 case R.id.imageViewCreativeLabs:
@@ -60,6 +60,7 @@ public class TwoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_advertise_new, container, false);
+
         ImageView gamingUa = (ImageView) view.findViewById(R.id.imageViewGamingUA);
         gamingUa.setOnClickListener(onClickListener);
 

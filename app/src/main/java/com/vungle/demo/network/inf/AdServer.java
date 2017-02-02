@@ -37,7 +37,7 @@ public class AdServer {
 
 
     public void initialiseAdServer(final AdCallBack adCallBack) {
-        Call<List<AdData>> call = adApis.getDataResponse();
+        Call<List<AdData>> call = adApis.getAsData();
         call.enqueue(new Callback<List<AdData>>() {
             @Override
             public void onResponse(Call<List<AdData>> call, Response<List<AdData>> response) {
@@ -63,6 +63,9 @@ public class AdServer {
         //TODO: validation for list of category
         List<AdData> adsByCategory = new ArrayList<AdData>();
         List<AdData> allAd = adStorage.getAllAd();
+        if (allAd == null) {
+            return adsByCategory;
+        }
         for (AdData adData : allAd) {
             if (adData != null && adData.getSubCategory().toLowerCase().equals(category)) {
                 adsByCategory.add(adData);
