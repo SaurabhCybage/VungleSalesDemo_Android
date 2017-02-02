@@ -1,4 +1,4 @@
-<android.support.design.widget.CollapsingToolbarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -13,17 +13,18 @@
     <FrameLayout
         android:id="@+id/advertiseContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs" />
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
         android:background="@color/app_background"
         android:padding="05dp"
         app:tabGravity="fill"
         app:tabIndicatorHeight="4dp"
         app:tabMode="fixed" />
 
-</android.support.design.widget.CollapsingToolbarLayout>
+</RelativeLayout>

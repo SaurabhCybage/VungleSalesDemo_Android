@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/slide_background"
+    tools:context="com.vungle.demo.ui.fragments.HomeSlide1Fragment">
+
+
+    <ImageView
+        android:id="@+id/imageViewVungleLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        app:srcCompat="@drawable/vungle_logo" />
+
+    <TextView
+        android:id="@+id/textViewSlide3Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewVungleLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:gravity="center_horizontal"
+        android:text="Flexible Native Ads"
+        android:textColor="@android:color/white"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/textViewSlide3Desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSlide3Title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="Vungle’s take on the \n high-performing format users love"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonLearnMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSlide3Desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:drawableEnd="@drawable/arrow_fwd"
+        android:text="Learn More "
+        android:textColor="#2f8fcd" />
+
+    <ImageView
+        android:id="@+id/imageViewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLearnMore"
+        android:layout_marginTop="35dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/home_native_graphic" />
+</RelativeLayout>
