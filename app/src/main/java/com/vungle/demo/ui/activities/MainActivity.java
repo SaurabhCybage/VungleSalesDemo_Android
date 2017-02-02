@@ -16,6 +16,7 @@ import com.vungle.demo.ui.fragments.OneFragment;
 import com.vungle.demo.ui.fragments.TwoFragment;
 
 public class MainActivity extends AppCompatActivity {
+
     private TabLayout tabLayout;
 
 
@@ -27,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         setUpTabLayout(tabLayout);
 
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.advertiseContainer, new OneFragment()).addToBackStack(null).commit();
+
+
     }
 
     private void setUpTabLayout(TabLayout tabLayout) {
@@ -34,10 +40,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.tab_home));
         tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.tab_advertize));
         tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.tab_monetize));
-//        //Initialize tabs
-//        tabLayout.getTabAt(0).setCustomView(R.layout.tab_home);
-//        tabLayout.getTabAt(1).setCustomView(R.layout.tab_advertize);
-//        tabLayout.getTabAt(2).setCustomView(R.layout.tab_monetize);
 
         //Set listeners for tab selection and de-selection, to change the icon accordingly.
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -99,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public TabLayout getTabLayout() {
+        return tabLayout;
+    }
+
     /**
      * Since clicked on tab so clearing all previous back stack entry of fragments.
      */
@@ -109,21 +115,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //
-//    @Override
-//    public void onBackPressed() {
-//        if (getFragmentManager().getBackStackEntryCount() > 0)
-//            getFragmentManager().popBackStack();
-//        else
-//            super.onBackPressed();
-//    }
-//
+
+    @Override
+    public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() <= 1) {
+            super.onBackPressed();
+            finish();
+            return;
+        }
+        getSupportFragmentManager().popBackStack();
+    }
+
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.imageViewBackButton:
-                getFragmentManager().popBackStack();
+                onBackPressed();
                 break;
         }
     }
-
 }

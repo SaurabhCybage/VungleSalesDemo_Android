@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick"
+            android:padding="05dp"
             android:src="@drawable/arrow_back_white" />
 
         <TextView

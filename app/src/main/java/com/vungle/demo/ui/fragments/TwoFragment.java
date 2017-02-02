@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.vungle.demo.R;
+import com.vungle.demo.ui.activities.MainActivity;
 
 /**
  * Created by saurabhgupt on 1/17/2017.
@@ -42,7 +43,7 @@ public class TwoFragment extends Fragment {
                     transaction.commit();
                     break;
                 case R.id.imageViewCreativeLabs:
-                    transaction.replace(R.id.advertiseContainer, new CreativeLabsFragment());
+                    transaction.replace(R.id.advertiseContainer, new CreativeLabsFragment()).addToBackStack(null);
                     transaction.commit();
                     break;
 
@@ -77,5 +78,10 @@ public class TwoFragment extends Fragment {
         creativeLabs.setOnClickListener(onClickListener);
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }

@@ -1,34 +1,64 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vungle.demo.ui.fragments.MonetizePlacementsFragment">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <ImageView
-            android:id="@+id/imageViewAdFormat"
-            android:layout_width="match_parent"
+            android:id="@+id/imageViewBackButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/placements_formats" />
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            android:padding="05dp"
+            android:src="@drawable/arrow_back_white" />
 
-        <ImageView
-            android:id="@+id/imageViewInterstitialPlacements"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textViewAdHeaderTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/placements_interstitial" />
+            android:text="Title"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/imageViewRewardedPlacements"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/placements_optin" />
     </LinearLayout>
-</ScrollView>
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.vungle.demo.ui.fragments.MonetizePlacementsFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewAdFormat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/placements_formats" />
+
+            <ImageView
+                android:id="@+id/imageViewInterstitialPlacements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/placements_interstitial" />
+
+            <ImageView
+                android:id="@+id/imageViewRewardedPlacements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/placements_optin" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -64,7 +64,7 @@ public class VungleApplication extends Application {
                 List<AdData> adDataList = (List<AdData>) responseData;
 
                 for (AdData adData : adDataList) {
-                    Log.i("saurabh", adData.toString());
+                    Log.i("Response", adData.toString());
                 }
             }
 
